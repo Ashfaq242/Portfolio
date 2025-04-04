@@ -211,4 +211,45 @@
                     <li><strong>Programming Languages (Basic Knowledge):</strong> C#, ASPX, HTML</li>
                     <li><strong>Database Management:</strong> SQL Server (Joins, Subqueries), SQL Jobs, Automation, Detached and Attached Databases</li>
                     <li><strong>Web Technologies:</strong> Basic knowledge of HTML, ASPX, IIS (Publishing Applications), SSL Certificate Binding to Websites</li>
-                    <
+                    <li><strong>Database Operations:</strong> Moving MDF and LDF files for SQL Server, Creating and Managing Databases</li>
+                    <li><strong>Problem Solving:</strong> Troubleshooting, System Analysis, Data Management, Issue Identification</li>
+                    <li><strong>Project Management:</strong> Handling and executing multiple projects simultaneously, Client Support, Web Development</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Ashfaq Abdul Jabbar Shaikh</p>
+    </footer>
+
+    <script>
+        function greetUser() {
+            // Get the values from input fields
+            const userName = document.getElementById("userName").value;
+            const gender = document.getElementById("gender").value;
+
+            // Create the greeting message using template literals (backticks)
+            let greetingMessage = "";
+
+            if (userName) {
+                if (gender === "M") {
+                    greetingMessage = `Welcome to my profile Mr. ${userName}`;
+                } else if (gender === "F") {
+                    greetingMessage = `Welcome to my profile Ms. ${userName}`;
+                }
+
+                // Display the greeting on the page
+                document.getElementById("greetingMessage").textContent = greetingMessage;
+
+                // Use Web Speech API to speak the greeting
+                const speech = new SpeechSynthesisUtterance(greetingMessage);
+                window.speechSynthesis.speak(speech);
+            } else {
+                alert("Please enter your name.");
+            }
+        }
+    </script>
+</body>
+
+</html>
