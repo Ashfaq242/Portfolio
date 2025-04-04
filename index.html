@@ -122,17 +122,19 @@
 
         /* LinkedIn Logo Container */
         .logo-container {
-            position: absolute;
+            position: fixed;
             top: 20px;
             right: 20px;
             background-color: #0077b5;
             border-radius: 50%;
-            padding: 10px;
+            padding: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
         }
 
         .logo-container img {
-            width: 30px;
-            height: 30px;
+            width: 40px;
+            height: 40px;
         }
     </style>
 </head>
@@ -141,7 +143,7 @@
     <!-- LinkedIn Logo with Link -->
     <a href="https://www.linkedin.com/in/ashfaq-shaikh-400899131/" target="_blank">
         <div class="logo-container">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/LinkedIn_Logo_2013.svg" alt="LinkedIn Logo">
+            <img src="https://github.com/Ashfaq242/Portfolio/blob/main/Linked.jpg" alt="LinkedIn Logo">
         </div>
     </a>
 
@@ -166,56 +168,10 @@
         <p class="greeting" id="greetingMessage"></p>
 
         <h2>Objective</h2>
-        <p>A proactive and solution-oriented Software Support Engineer with hands-on experience in biometric systems, canteen management, contract management, SQL database management, and web technologies. Skilled in handling multiple projects and clients simultaneously, ensuring timely issue resolution, and delivering high-quality solutions. Seeking to leverage my technical expertise and problem-solving skills to support clients in optimizing their business processes.</p>
+        <p>A proactive and solution-oriented Software Support Engineer with hands-on experience in biometric systems...</p>
 
         <div class="container">
-            <div>
-                <h2 class="section-title">Professional Experience</h2>
-                <div class="title">Software Support Engineer</div>
-                <p><strong>Smart Infocom, Malad</strong> - <em>July 2024 – Present</em></p>
-                <ul class="project-list">
-                    <li>Provide support for biometric punching machines used for attendance and canteen management systems.</li>
-                    <li>Troubleshoot and resolve issues in biometric systems, ensuring accurate attendance and data synchronization.</li>
-                    <li>Design and implement SQL queries, jobs, and automation for attendance management processes.</li>
-                    <li>Successfully managed and delivered five major projects while handling multiple clients simultaneously.</li>
-                    <li>Conduct system analysis to identify and resolve application data issues.</li>
-                </ul>
-
-                <div class="title">Key Projects</div>
-                <ul class="project-list">
-                    <li>Barry Callebaut Websmart Lite – Developed a Lite version of an attendance system.</li>
-                    <li>Leelavati Bandra Canteen Kiosk System – Managed and implemented a canteen kiosk system.</li>
-                    <li>Graphite India Websmart Attendance – Implementation of a web-based attendance system.</li>
-                    <li>Britania Ranjangaon Canteen – Developed and managed the canteen management system.</li>
-                    <li>Paradeep Phosphates Limited (Adventz) – Software installation and management across multiple locations.</li>
-                </ul>
-
-                <div class="title">Front Desk Executive</div>
-                <p><strong>Lucky Hotel, Goregaon, Mumbai</strong> - <em>April 2017 – June 2024</em></p>
-                <ul class="project-list">
-                    <li>Managed front desk operations, ensuring a high level of customer service.</li>
-                    <li>Coordinated hotel activities, bookings, and handled customer inquiries.</li>
-                    <li>Assisted in administrative tasks such as managing appointments, reservations, and providing guest information.</li>
-                </ul>
-            </div>
-
-            <div>
-                <h2 class="section-title">Education</h2>
-                <p><strong>Bachelor of Commerce (B.Com)</strong> - TYBcom, Mumbai University, 2017</p>
-
-                <h2 class="section-title">Certifications</h2>
-                <p>Certified Data Analyst</p>
-
-                <h2 class="section-title">Technical Skills</h2>
-                <ul class="skills-list">
-                    <li><strong>Programming Languages (Basic Knowledge):</strong> C#, ASPX, HTML</li>
-                    <li><strong>Database Management:</strong> SQL Server (Joins, Subqueries), SQL Jobs, Automation, Detached and Attached Databases</li>
-                    <li><strong>Web Technologies:</strong> Basic knowledge of HTML, ASPX, IIS (Publishing Applications), SSL Certificate Binding to Websites</li>
-                    <li><strong>Database Operations:</strong> Moving MDF and LDF files for SQL Server, Creating and Managing Databases</li>
-                    <li><strong>Problem Solving:</strong> Troubleshooting, System Analysis, Data Management, Issue Identification</li>
-                    <li><strong>Project Management:</strong> Handling and executing multiple projects simultaneously, Client Support, Web Development</li>
-                </ul>
-            </div>
+            <!-- Add your content here -->
         </div>
     </section>
 
@@ -225,11 +181,8 @@
 
     <script>
         function greetUser() {
-            // Get the values from input fields
             const userName = document.getElementById("userName").value;
             const gender = document.getElementById("gender").value;
-
-            // Create the greeting message using template literals (backticks)
             let greetingMessage = "";
 
             if (userName) {
@@ -238,13 +191,14 @@
                 } else if (gender === "F") {
                     greetingMessage = `Welcome to my profile Ms. ${userName}`;
                 }
-
-                // Display the greeting on the page
                 document.getElementById("greetingMessage").textContent = greetingMessage;
 
-                // Use Web Speech API to speak the greeting
-                const speech = new SpeechSynthesisUtterance(greetingMessage);
-                window.speechSynthesis.speak(speech);
+                if ('speechSynthesis' in window) {
+                    const speech = new SpeechSynthesisUtterance(greetingMessage);
+                    window.speechSynthesis.speak(speech);
+                } else {
+                    alert("Your browser does not support speech synthesis.");
+                }
             } else {
                 alert("Please enter your name.");
             }
