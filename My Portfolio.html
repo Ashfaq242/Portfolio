@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashfaq Abdul Jabbar Shaikh - Resume</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .container div {
+            flex: 1;
+            padding: 10px;
+        }
+
+        .title {
+            background-color: #2980b9;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        h2 {
+            color: #2c3e50;
+        }
+
+        .section-title {
+            font-weight: bold;
+            margin-top: 20px;
+            color: #34495e;
+        }
+
+        .project-list,
+        .skills-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .project-list li,
+        .skills-list li {
+            background-color: #ecf0f1;
+            margin: 8px 0;
+            padding: 8px;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .form-container {
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        input[type="text"],
+        select {
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #2980b9;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #3498db;
+        }
+
+        .greeting {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+            color: #2980b9;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Ashfaq Abdul Jabbar Shaikh</h1>
+        <p>Email: <a href="mailto:asfaqshaikh04@gmail.com" style="color: white;">asfaqshaikh04@gmail.com</a> | Phone: 8652427098 | DOB: 11/12/1995</p>
+    </header>
+
+    <section>
+        <h2>Welcome to My Profile</h2>
+
+        <div class="form-container">
+            <p>Please enter your name and select your gender:</p>
+            <input type="text" id="userName" placeholder="Enter your name" required />
+            <select id="gender">
+                <option value="M">Male</option>
+                <option value="F">Female</option>
+            </select>
+            <button onclick="greetUser()">Submit</button>
+        </div>
+
+        <p class="greeting" id="greetingMessage"></p>
+
+        <h2>Objective</h2>
+        <p>A proactive and solution-oriented Software Support Engineer with hands-on experience in biometric systems, canteen management, contract management, SQL database management, and web technologies. Skilled in handling multiple projects and clients simultaneously, ensuring timely issue resolution, and delivering high-quality solutions. Seeking to leverage my technical expertise and problem-solving skills to support clients in optimizing their business processes.</p>
+
+        <div class="container">
+            <div>
+                <h2 class="section-title">Professional Experience</h2>
+                <div class="title">Software Support Engineer</div>
+                <p><strong>Smart Infocom, Malad</strong> - <em>July 2024 – Present</em></p>
+                <ul class="project-list">
+                    <li>Provide support for biometric punching machines used for attendance and canteen management systems.</li>
+                    <li>Troubleshoot and resolve issues in biometric systems, ensuring accurate attendance and data synchronization.</li>
+                    <li>Design and implement SQL queries, jobs, and automation for attendance management processes.</li>
+                    <li>Successfully managed and delivered five major projects while handling multiple clients simultaneously.</li>
+                    <li>Conduct system analysis to identify and resolve application data issues.</li>
+                </ul>
+
+                <div class="title">Key Projects</div>
+                <ul class="project-list">
+                    <li>Barry Callebaut Websmart Lite – Developed a Lite version of an attendance system.</li>
+                    <li>Leelavati Bandra Canteen Kiosk System – Managed and implemented a canteen kiosk system.</li>
+                    <li>Graphite India Websmart Attendance – Implementation of a web-based attendance system.</li>
+                    <li>Britania Ranjangaon Canteen – Developed and managed the canteen management system.</li>
+                    <li>Paradeep Phosphates Limited (Adventz) – Software installation and management across 32 locations.</li>
+                </ul>
+
+                <div class="title">Front Desk Executive</div>
+                <p><strong>Lucky Hotel, Goregaon, Mumbai</strong> - <em>April 2017 – June 2024</em></p>
+                <ul class="project-list">
+                    <li>Managed front desk operations, ensuring a high level of customer service.</li>
+                    <li>Coordinated hotel activities, bookings, and handled customer inquiries.</li>
+                    <li>Assisted in administrative tasks such as managing appointments, reservations, and providing guest information.</li>
+                </ul>
+            </div>
+
+            <div>
+                <h2 class="section-title">Education</h2>
+                <p><strong>Bachelor of Commerce (B.Com)</strong> - TYBcom, Mumbai University, 2017</p>
+
+                <h2 class="section-title">Certifications</h2>
+                <p>Certified Data Analyst</p>
+
+                <h2 class="section-title">Technical Skills</h2>
+                <ul class="skills-list">
+                    <li><strong>Programming Languages (Basic Knowledge):</strong> C#, ASPX, HTML</li>
+                    <li><strong>Database Management:</strong> SQL Server (Joins, Subqueries), SQL Jobs, Automation, Detached and Attached Databases</li>
+                    <li><strong>Web Technologies:</strong> Basic knowledge of HTML, ASPX, IIS (Publishing Applications), SSL Certificate Binding to Websites</li>
+                    <li><strong>Database Operations:</strong> Moving MDF and LDF files for SQL Server, Creating and Managing Databases</li>
+                    <li><strong>Problem Solving:</strong> Troubleshooting, System Analysis, Data Management, Issue Identification</li>
+                    <li><strong>Project Management:</strong> Handling and executing multiple projects simultaneously, Client Support, Web Development</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Ashfaq Abdul Jabbar Shaikh</p>
+    </footer>
+
+    <script>
+        function greetUser() {
+            // Get the values from input fields
+            const userName = document.getElementById("userName").value;
+            const gender = document.getElementById("gender").value;
+
+            // Create the greeting message
+            let greetingMessage = "";
+
+            if (userName) {
+                if (gender === "M") {
+                    greetingMessage = Welcome to my profile Mr. ${userName};
+                } else if (gender === "F") {
+                    greetingMessage = Welcome to my profile Ms. ${userName};
+                }
+
+                // Display the greeting on the page
+                document.getElementById("greetingMessage").textContent = greetingMessage;
+
+                // Use Web Speech API to speak the greeting
+                const speech = new SpeechSynthesisUtterance(greetingMessage);
+                window.speechSynthesis.speak(speech);
+            } else {
+                alert("Please enter your name.");
+            }
+        }
+    </script>
+</body>
+
+</html>
